@@ -1,4 +1,12 @@
 <p (click)="changeColor('blue')" [style.color]='myColor'>Hello, {{user?.name}}</p>
 <input type="text" #colorElement>
 <button (click)="changeColor(colorElement.value)">Change color</button>
-<app-user-card [user]="user"></app-user-card>
+<button (click)="isShow = !isShow">Hide!</button>
+
+<app-user-card *ngIf="isShow" [user]="user"></app-user-card>
+
+<ul>
+    <li *ngFor="let user of users">
+        {{user.name}}
+    </li>
+</ul>

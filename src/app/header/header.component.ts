@@ -12,6 +12,18 @@ export class HeaderComponent implements OnInit {
     age: 24
   };
 
+  public users = [
+    {
+      name:'Dima'
+    },
+    {
+      name:'Alise'
+    },
+    {
+      name:'Alex'
+    }
+  ]
+  public isShow = true;
   public myClass = 'red';
 
   public myColor = 'yellow';
