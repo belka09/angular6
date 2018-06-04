@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input ,EventEmitter} from '@angular/core';
+import { Output } from "@angular/core";
 
 @Component({
   selector: 'app-user-card',
@@ -8,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UserCardComponent implements OnInit {
 
   @Input('user') user;
+  @Output('userSelected') userSelected: EventEmitter<any> = new EventEmitter;
 
   constructor() {
     console.log(`constructor: ${this.user}`);
@@ -17,4 +19,7 @@ export class UserCardComponent implements OnInit {
     console.log(`onInit: ${this.user}`);
   }
 
+  selectUser(){
+    this.userSelected.emit();
+  }
 }

@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
   ]
   public isShow = true;
   public myClass = 'red';
+  public selectedUser;
 
   public myColor = 'yellow';
 
